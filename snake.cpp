@@ -1,3 +1,13 @@
+/*
+The controls used are as follows:
+UP: W
+DOWN: S
+LEFT: A
+RIGHT: D
+
+The speed of game can be controlled by time in Sleep() function in main()
+
+*/
 #include<iostream>
 #include<conio.h> // console input output
 #include<windows.h>
@@ -197,7 +207,7 @@ int main() {
     Draw();
     Input();
     Logic();
-    Sleep(500); //to slow down the game
+    Sleep(100); //to slow down the game
   }
   if (gameOver) {
     if (overReason == 1)
