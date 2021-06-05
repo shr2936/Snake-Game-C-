@@ -9,17 +9,17 @@ The speed of game can be controlled by time in Sleep() function in main()
 
 */
 #include<iostream>
-#include<conio.h> // console input output
-#include<windows.h>
+#include<conio.h>
+#include<windows.h> // for Sleep() function
 using namespace std;
 
-int snake[400][2];                                 // array to store the coordinates of snake as its length increases , snake[0][0] would be the starting point
-int fruitX, fruitY;                                 // coordinates of fruit for snake
+const int width = 20;                              // width of playing area
+const int height = 20;                             // height of playing area
+int snake[height * width][2];                      // array to store the coordinates of snake as its length increases , snake[0][0] would be the starting point
+int fruitX, fruitY;                                // coordinates of fruit for snake
 int length, score;                                 // length of snake and score of user
-bool gameOver;                                     // to infinitely loop over the game until gameOver is false
+bool gameOver;                                     // to infinitely loop over the game until gameOver is true
 bool gameComplete;
-const int width = 7;                              // width of playing area
-const int height = 7;                             // height of playing area
 enum eDirection {STOP = 0, LEFT, RIGHT, UP, DOWN};
 eDirection dir;                                    // holds the direction of snake
 eDirection previous;
